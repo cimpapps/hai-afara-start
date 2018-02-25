@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Add Item</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label>Title</ion-label>
+    <ion-input placeholder="My Title Here" [(ngModel)]="event.title"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Descrition</ion-label>
+    <ion-input placeholder="My Title Here" [(ngModel)]="event.description"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Price</ion-label>
+    <ion-input type="number" placeholder="0.0" [(ngModel)]="event.price"></ion-input>
+
+  </ion-item>
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY HH:mm" min="2016" [(ngModel)]="event.date">
+    </ion-datetime>
+  </ion-item>
+
+
+
+  <button ion-button round (click)="addEvent(event)">
+    Add
+  </button>
+
+</ion-content>

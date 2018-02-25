@@ -1,0 +1,30 @@
+<ion-header color="primary"> <ion-navbar> <ion-title>
+Evenimente </ion-title> <ion-buttons end>
+<button color = "danger" navPush="AddEventPage" ion-button>
+Add
+	<ion-icon  name="add-circle"></ion-icon>
+</button>
+</ion-buttons> </ion-navbar> </ion-header>
+
+<ion-content padding> <ion-card
+	*ngFor="let event of events$ | async" navPush="EventDetailPage"
+	[navParams]="{event:event}"> <ion-item detail-push>
+<ion-card-title>{{event.title}}</ion-card-title>
+<ion-item >
+<ion-icon name="calendar"></ion-icon>
+<p item-end>{{event.date | date:'dd/MM/yyyy'}}</p>
+</ion-item>
+
+</ion-item> 
+
+<ion-card-content padding>
+<p>{{event.description}}</p>
+</ion-card-content> 
+
+<ion-item padding>
+	<ion-icon name="pricetag"></ion-icon>
+	<ion-badge
+	item-end>{{event.price | currency:'RON '}}</ion-badge> 
+</ion-item> 
+</ion-card> 
+</ion-content>

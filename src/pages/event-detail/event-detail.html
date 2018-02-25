@@ -1,0 +1,26 @@
+<ion-header> <ion-navbar color="primary"> <ion-title>{{event?.title}}</ion-title>
+</ion-navbar> </ion-header>
+
+
+<ion-content padding> <ion-item> <ion-label>Title</ion-label>
+<ion-input placeholder="My Title Here" [(ngModel)]="event.title"></ion-input>
+</ion-item> <ion-item> <ion-label>Descrition</ion-label> <ion-textarea
+	placeholder="My Title Here" [(ngModel)]="event.description"></ion-textarea>
+</ion-item> <ion-item> <ion-label>Price</ion-label> <ion-input
+	type="number" placeholder="0.0" [(ngModel)]="event.price"></ion-input>
+
+</ion-item> <ion-item> <ion-label>Date</ion-label> <ion-datetime
+	displayFormat="DD/MM/YYYY HH:mm" min="2016"
+	[(ngModel)]="event.date"> </ion-datetime></ion-item>
+<ion-buttons>
+<button ion-button full large icon-right (click)="editEvent(event)">
+Save Changes  
+<ion-icon name="create"></ion-icon>
+</button>
+
+<button full large ion-button color="danger" icon-right (click)="deleteEvent(event)">
+	Delete Event 
+	<ion-icon name="trash"></ion-icon>
+</button>
+</ion-buttons>
+</ion-content>
