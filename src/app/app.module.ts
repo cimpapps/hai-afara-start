@@ -12,24 +12,26 @@ import { AngularFireDatabaseModule } from "angularfire2/database";
 import { Camera } from "@ionic-native/camera";
 import { EventListPage } from "../pages/event-list/event-list";
 import { AboutPage } from "../pages/about/about";
+import { HomePage } from "../pages/home/home";
 
 @NgModule({
   declarations: [
     MyApp,
     EventListPage, 
-    AboutPage
+    AboutPage,
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp), 
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireDatabaseModule,
+  
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp, 
     EventListPage,
-    AboutPage
+    AboutPage,
   ],
   providers: [
     StatusBar,
