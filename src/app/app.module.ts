@@ -10,10 +10,14 @@ import { FIREBASE_CONFIG } from "./firebase.credentials";
 import { AngularFireModule } from "angularfire2";
 import { AngularFireDatabaseModule } from "angularfire2/database";
 import { Camera } from "@ionic-native/camera";
+import { EventListPage } from "../pages/event-list/event-list";
+import { AboutPage } from "../pages/about/about";
 
 @NgModule({
   declarations: [
-    MyApp
+    MyApp,
+    EventListPage, 
+    AboutPage
   ],
   imports: [
     BrowserModule,
@@ -23,7 +27,9 @@ import { Camera } from "@ionic-native/camera";
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp
+    MyApp, 
+    EventListPage,
+    AboutPage
   ],
   providers: [
     StatusBar,
